@@ -74,3 +74,7 @@ You will need the following dependencies installed on your machine.
 1. `git clone https://github.com/mathewtrivett/hmu-rails.git` the repository to where you store your code.
 2. `cd` to where you want to create your Rails project.
 3. Run `rails new APP_NAME -d postgresql -m path/to/hmu-rails/template.rb`
+
+## Contributing
+
+### Adding new Gems
