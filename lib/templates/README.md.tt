@@ -8,3 +8,9 @@
 ## Documentation
 
 Read [the documentation](docs/index.md) for this project
+
+### Technical decisions
+
+This project uses Architectural Decision Records to document technical decisions.
+
+> Read the [architectural decisions](docs/adr/README.md)
