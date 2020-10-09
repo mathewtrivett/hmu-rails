@@ -20,7 +20,8 @@
 # [generate_] run rails generators
 
 ## 
-# 
+# Sets source paths to be relative to the 
+# template directory 
 #
 def source_paths
   [__dir__]
@@ -33,11 +34,28 @@ end
 # Copies the template docs directory
 #
 def create_docs
-  directory "lib/templates/docs", 
+  directory "lib/templates/docs", "docs"
+end
+
+##
+# Generates a README from the template.
+# Overwrites the Rails default README
+#
+def create_readme
+  template "lib/templates/README.md.tt", "README.md", force: true
+end
+
+##
+# Creates a boilerplate changelog
+#
+def create_changelog
+  template "lib/templates/CHANGELOG.md.tt", "CHANGELOG.md"
 end
 
 source_paths
 
 after_bundle do
   create_docs
+  create_changelog
+  create_readme
 end
