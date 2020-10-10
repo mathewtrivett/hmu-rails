@@ -88,6 +88,10 @@ def create_dev_procfile
   template 'lib/templates/Procfile.dev', 'Procfile.dev'
 end
 
+def create_rubocop
+  template 'lib/templates/.rubocop.yml', '.rubocop.yml'
+end
+
 source_paths
 create_gitignore
 create_gemfile
@@ -100,4 +104,5 @@ after_bundle do
   config_rspec
   create_spec_support
   create_dev_procfile
+  create_rubocop
 end
