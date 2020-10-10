@@ -84,6 +84,10 @@ def create_spec_support
   directory 'lib/templates/spec/support', 'spec/support'
 end
 
+def create_dev_procfile
+  template 'lib/templates/Procfile.dev', 'Procfile.dev'
+end
+
 source_paths
 create_gitignore
 create_gemfile
@@ -95,4 +99,5 @@ after_bundle do
   create_rspec
   config_rspec
   create_spec_support
+  create_dev_procfile
 end
