@@ -92,6 +92,14 @@ def create_rubocop
   template 'lib/templates/.rubocop.yml', '.rubocop.yml'
 end
 
+def create_dotenv
+  template 'lib/templates/.env.tt', '.env'
+end
+
+def create_dotenv_template
+  template 'lib/templates/.env.template.tt', '.env.template'
+end
+
 source_paths
 create_gitignore
 create_gemfile
@@ -105,4 +113,6 @@ after_bundle do
   create_spec_support
   create_dev_procfile
   create_rubocop
+  create_dotenv
+  create_dotenv_template
 end
