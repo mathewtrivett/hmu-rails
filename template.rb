@@ -110,6 +110,10 @@ def create_sidekiq_scheduler
   template 'lib/templates/config/sidekiq.yml', 'config/sidekiq.yml'
 end
 
+def create_github_templates
+  directory 'lib/templates/.github', '.github'
+end
+
 source_paths
 create_gitignore
 create_gemfile
@@ -126,6 +130,7 @@ after_bundle do
   create_dotenv_template
   create_sidekiq_initializer
   create_sidekiq_scheduler
+  create_github_templates
   git checkout: '-b main'
   git add: '-A .'
   git commit: '-m "Initial repo setup"'
