@@ -115,4 +115,7 @@ after_bundle do
   create_rubocop
   create_dotenv
   create_dotenv_template
+  git checkout: '-b main'
+  git add: '-A .'
+  git commit: '-m "Initial repo setup"'
 end
