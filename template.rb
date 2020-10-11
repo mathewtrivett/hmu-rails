@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 ##
 # == Naming template methods
-# We propose to use a naming convention for template methods to 
+# We propose to use a naming convention for template methods to
 # make it easier to follow what the template does.
 #
 # This documentation uses [RDoc Markup](https://ruby-doc.org/stdlib-2.5.1/libdoc/rdoc/rdoc/RDoc/Markup.html)
@@ -9,19 +11,19 @@
 #
 # * Use a verb_ prefix to describe what the method does
 # * Use simple language to describe the action
-# 
+#
 # === Suggested prefixes
-# 
+#
 # [add_]  add dependencies
 # [create_] create files or directories
-# [destroy_] remove files or directories 
+# [destroy_] remove files or directories
 # [config_] write config files / variables
 # [install_] install third party tools
 # [generate_] run rails generators
 
-## 
-# Sets source paths to be relative to the 
-# template directory 
+##
+# Sets source paths to be relative to the
+# template directory
 #
 def source_paths
   [__dir__]
