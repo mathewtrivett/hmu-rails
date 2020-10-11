@@ -105,4 +105,7 @@ after_bundle do
   create_spec_support
   create_dev_procfile
   create_rubocop
+  git checkout: '-b main'
+  git add: '-A .'
+  git commit: '-m "Initial repo setup"'
 end
